@@ -31,4 +31,18 @@
       rgba(0, 0, 0, 0.75) 100%
     );
   }
+  a img {
+    @include media-breakpoint-down(md) {
+      aspect-ratio: 5/4;
+      height: auto;
+    }
+  }
+}
+
+.article-section__img img {
+  width: 100%;
+  aspect-ratio: 1120/630;
+  @include media-breakpoint-down(md) {
+    aspect-ratio: 5/4;
+  }
 }
