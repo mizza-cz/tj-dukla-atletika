@@ -1,5 +1,4 @@
 .partners-swiper {
-  max-width: 1920px;
   .swiper-slide {
     width: max-content;
     padding: 10px;
@@ -7,6 +6,10 @@
     img {
       height: 142px;
       object-fit: contain;
+      @include media-breakpoint-down(md) {
+        height: 110px;
+        width: 110px;
+      }
     }
   }
 }

@@ -1,0 +1,18 @@
+.partnerItem {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  img {
+    width: 192px;
+    height: 192px;
+    object-fit: contain;
+    @include media-breakpoint-down(sm) {
+      width: 160px;
+      height: 160px;
+    }
+  }
+}
