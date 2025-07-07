@@ -1,0 +1,12 @@
+a {
+  color: inherit;
+  transition: all 0.2s;
+  text-decoration-color: inherit;
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
+a:focus-visible {
+  outline-color: var(--color-primary-500);
+  outline-offset: 2px;
+}

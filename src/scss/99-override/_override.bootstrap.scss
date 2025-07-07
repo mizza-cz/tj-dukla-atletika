@@ -1,0 +1,56 @@
+/*! purgecss start ignore */
+
+.bg-light {
+  background-color: var(--color-light) !important;
+}
+.bg-dark {
+  background-color: var(--color-dark) !important;
+}
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+.rounded-4 {
+  border-radius: 16px;
+}
+
+.gradient-primary {
+  background-color: var(--color-dark);
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background: linear-gradient(
+      10deg,
+      rgba(102, 19, 27, 0) 19.73%,
+      rgba(102, 19, 27, 0.64) 46.53%,
+      rgba(0, 0, 0, 0.8) 72.31%
+    );
+  }
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+.text-primary {
+  color: var(--color-primary) !important;
+}
+.text-white {
+  color: var(--color-light) !important;
+}
+.text-tertiary {
+  color: var(--color-tertiary) !important;
+}
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+.rounded-10 {
+  border-radius: 10px;
+}
+.rounded-6 {
+  border-radius: 6px;
+}
+/*! purgecss end ignore */

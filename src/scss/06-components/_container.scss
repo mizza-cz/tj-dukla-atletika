@@ -1,0 +1,21 @@
+.container-base {
+  max-width: 100% !important;
+  @media (min-width: 1548px) {
+    max-width: 90rem !important;
+  }
+}
+[class^="container-"] {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.container-md {
+  max-width: 63rem !important;
+}
+.container-lg {
+  max-width: 77.2rem !important;
+}
