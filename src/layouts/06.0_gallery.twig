@@ -1,0 +1,57 @@
+{% extends "@components/base/base.twig" %} {% set title = "06.0_gallery" %} {%
+block main %}
+
+<section class="py-md-16 py-10">
+  <div class="container-base">
+    <div
+      class="mb-10 gap-6 d-flex flex-wrap align-items-center justify-content-between"
+    >
+      <h1 class="h1 text-primary">Archiv galerií</h1>
+
+      <form action="/article/" method="get" class="archiveForm">
+        <div
+          class="d-flex gap-4 align-items-center w-md-auto w-100 flex-md-row flex-column"
+        >
+          <div class="o-select">
+            <select name="obdobi" class="js-select">
+              <option value="">Celé období</option>
+              <option value="období-1">období 1</option>
+              <option value="období-2">období 2</option>
+            </select>
+          </div>
+          <div class="o-select">
+            <select name="category" class="js-select">
+              <option value="">Všechny kategorie</option>
+              <option value="aktualni-zpravy">Aktuální zprávy</option>
+              <option value="rozhovory">Rozhovory</option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="d-flex gap-4 align-items-center flex-md-row flex-column w-md-auto w-100"
+        >
+          <div class="archiveForm__input">
+            <input
+              name="search"
+              placeholder="Zadejte hledaný výraz..."
+              type="text"
+            />
+          </div>
+          <button type="submit" class="button-primary">
+            Hledat {% include "@images/chevron-right.svg" %}
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="row g-md-8 g-6 mb-10">
+      {% for i in 1..11 %}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        {% include "@components/card/cardAlbum.twig" %}
+      </div>
+      {% endfor %}
+    </div>
+    {% include "@components/pagination/pagination.twig" %}
+  </div>
+</section>
+
+{% endblock %}
