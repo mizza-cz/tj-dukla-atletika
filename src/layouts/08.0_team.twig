@@ -1,0 +1,17 @@
+{% extends "@components/base/base.twig" %} {% set title = "08.0_team" %} {%
+block main %}
+
+<section class="team-section py-md-16 py-10">
+  <div class="container-base">
+    <h1 class="h1 text-primary mb-md-10 mb-6">Naši atleti</h1>
+    <div class="row g-md-8 g-6 mb-10">
+      {% for i in 1..12 %}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+        {% include "@components/card/cardPlayer.twig" %}
+      </div>
+      {% endfor %}
+    </div>
+    {% include "@components/pagination/pagination.twig" %}
+  </div>
+</section>
+{% include "@components/partnersSlider/partnersSlider.twig" %} {% endblock %}
