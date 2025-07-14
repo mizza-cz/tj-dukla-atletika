@@ -76,11 +76,18 @@
     width: 24px;
     height: 24px;
     object-fit: contain;
+    path {
+      transition: all 0.2s;
+    }
   }
 
   &:hover,
   &:focus-visible {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
+    background-color: var(--color-light);
+    border-color: var(--color-light);
+    color: var(--color-primary);
+    svg path {
+      stroke: var(--color-primary);
+    }
   }
 }

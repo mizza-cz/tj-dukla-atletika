@@ -20,6 +20,7 @@
     height: 80px;
     transition: all 0.3s;
     bottom: 12px;
+    z-index: 99;
     @include media-breakpoint-down(md) {
       width: 5.5rem;
       height: 3.8rem;
@@ -67,21 +68,16 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 8px 0;
-    //  @include media-breakpoint-down(lg) {
-    //    &.active {
-    //      border-bottom: none;
-    //    }
-    //  }
-    //  @include media-breakpoint-down(lg) {
-    //    width: 100%;
-    //    text-align: center;
-    //    border-bottom: none;
-    //    font-size: 16px;
-    //    font-weight: 500;
-    //    &.show {
-    //      color: var(--color-light);
-    //    }
-    //  }
+
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+      text-align: center;
+      border-bottom: none;
+      font-size: 20px;
+      &.show {
+        color: var(--color-light);
+      }
+    }
     &.active,
     &:hover,
     &:focus {
@@ -104,11 +100,16 @@
     padding: 0 21px;
     display: flex;
     align-items: center;
+    @include media-breakpoint-down(xl) {
+      display: block;
+      text-align: center;
+    }
     &.active {
       .dropdown-menu {
         @include media-breakpoint-down(xl) {
           height: 100%;
-          display: flex;
+          display: block;
+          text-align: center;
           position: static;
         }
       }
@@ -132,6 +133,9 @@
     width: 2px;
     height: 8px;
     background: var(--color-tertiary);
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
   }
   .navbar-collapse {
     @include media-breakpoint-down(xl) {
@@ -141,18 +145,18 @@
       position: absolute;
       transition: all 0.3s ease-out;
       right: 0px;
-      z-index: 99999;
+      z-index: 98;
       top: 100%;
-      width: calc(100% + 16px);
+      width: calc(100% + 40px);
       margin: 0 auto;
       justify-content: flex-start;
       align-items: center;
       padding: 16px 40px 16px;
       flex-direction: column;
       background-color: var(--color-primary);
-      left: -16px;
+      left: -20px;
       border-bottom: 4px solid var(--color-tertiary);
-      height: calc(100vh - 93px);
+      height: calc(100vh - 40px);
       gap: 24px;
       padding-top: 24px;
       padding-bottom: 24px;
@@ -190,7 +194,7 @@
 
     padding-top: 10px;
     flex-direction: column;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       text-align: center;
       position: static;
       box-shadow: none;
@@ -225,17 +229,21 @@
     text-decoration: none;
     line-height: 100%;
     background: var(--color-dark);
+    text-transform: uppercase;
     &:hover,
     &:focus {
       background: var(--color-tertiary);
     }
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       transform: none;
       width: 100%;
       left: 0;
       padding-left: 0;
       padding-right: 0;
       color: var(--color-light);
+      background-color: var(--color-primary);
+      font-size: 18px;
+      font-weight: 600;
       &:hover,
       &:focus {
         background: var(--color-primary);
@@ -248,7 +256,7 @@
   display: block;
   top: 100% !important;
   transform: none !important;
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(xl) {
     position: static !important;
   }
 }
