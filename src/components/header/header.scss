@@ -1,10 +1,17 @@
 .header {
+  position: relative;
+  z-index: 100;
   &__inner {
     padding: 16px 100px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include media-breakpoint-down(xl) {
+      justify-content: flex-end;
+      gap: 12px;
+      padding: 8px 0 8px 100px;
+    }
   }
   &__logo {
     position: absolute;
@@ -13,6 +20,11 @@
     height: 80px;
     transition: all 0.3s;
     bottom: 12px;
+    @include media-breakpoint-down(md) {
+      width: 5.5rem;
+      height: 3.8rem;
+      bottom: -12px;
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -27,11 +39,13 @@
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
+    @include media-breakpoint-down(xl) {
+      position: relative;
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -77,13 +91,12 @@
   .navbar-nav {
     display: flex;
     align-items: center;
-    //  @include media-breakpoint-down(lg) {
-    //    flex-direction: column;
-    //    position: relative;
-    //    z-index: 30;
-    //    margin-bottom: 16px;
-    //    width: 100%;
-    //  }
+    @include media-breakpoint-down(xl) {
+      flex-direction: column;
+      padding-left: 0;
+      width: 100%;
+      gap: 0.5rem;
+    }
   }
 
   .nav-item {
@@ -91,6 +104,26 @@
     padding: 0 21px;
     display: flex;
     align-items: center;
+    &.active {
+      .dropdown-menu {
+        @include media-breakpoint-down(xl) {
+          height: 100%;
+          display: flex;
+          position: static;
+        }
+      }
+    }
+    &.active {
+      .navbar-link {
+        color: var(--color-primary);
+      }
+
+      .dropdown-menu {
+        transition: all 0.8s;
+        display: flex;
+        z-index: 28;
+      }
+    }
   }
   .nav-item:not(:first-child)::before {
     content: "";
@@ -99,6 +132,31 @@
     width: 2px;
     height: 8px;
     background: var(--color-tertiary);
+  }
+  .navbar-collapse {
+    @include media-breakpoint-down(xl) {
+      opacity: 0;
+
+      visibility: hidden;
+      position: absolute;
+      transition: all 0.3s ease-out;
+      right: 0px;
+      z-index: 99999;
+      top: 100%;
+      width: calc(100% + 16px);
+      margin: 0 auto;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 16px 40px 16px;
+      flex-direction: column;
+      background-color: var(--color-primary);
+      left: -16px;
+      border-bottom: 4px solid var(--color-tertiary);
+      height: calc(100vh - 93px);
+      gap: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
   }
 }
 
@@ -193,4 +251,15 @@
   @include media-breakpoint-down(lg) {
     position: static !important;
   }
+}
+
+.homeHeader__inner {
+  background: transparent;
+  @include media-breakpoint-down(xl) {
+    background: var(--color-primary);
+  }
+}
+.is-nav-open .header .navbar-collapse {
+  visibility: visible;
+  opacity: 1;
 }

@@ -32,8 +32,8 @@
 
 <body>
 	<div class="base">
-		<header class="header">
-			<div class="bg-dark py-3">
+		<header class="header homeHeader">
+			<div class="bg-dark py-3 d-md-block d-none">
 				<div class="container-base">
 					<div class="d-flex align-items-center gap-6 justify-content-end">
 						<a href="#" target="_blank">
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="bg-primary">
+			<div class="homeHeader__inner">
 				<div class="container-base">
 					<div class="header__inner">
 						<a href="#" class="header__logo">
@@ -92,6 +92,9 @@
 								</li>
 							</ul>
 						</nav>
+						<button class="c-header__opener js-header__opener" type="button">
+							<span></span>
+						</button>
 						<a href="#" class="header__search">
 							<img src="images/ico/search.svg" alt="search" />
 						</a>
@@ -99,9 +102,379 @@
 				</div>
 			</div>
 		</header>
+
 		<main class="main" aria-label="Hlavní obsah">
 
-			Hello, World!
+			<section class="hero-section" style="background-image: url('images/content/hero.png')">
+				<div class="container-base h-100">
+					<div class="position-relative h-100">
+						<div class="hero-section__inner">
+							<div class="d-grif gap-3 text-white">
+								<h1 class="h1">TJ Dukla Praha</h1>
+								<p class="text-xxl-normal">Nejúspěšnější atletický oddíl v Česku</p>
+							</div>
+							<a href="#" class="hero-section__btn">
+								Chci se stát součástí Dukly <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19 21.5l3-3m0 0l-3-3m3 3h-6M12 16H7.5c-1.396 0-2.093 0-2.661.172a4 4 0 00-2.667 2.667C2 19.407 2 20.104 2 21.5M14.5 8a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" stroke="#fff" stroke-width="1.66" />
+								</svg> </a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="boardContent">
+				<div class="container-base">
+					<div class="row g-8">
+						<div class="col-xl-4 col-md-6">
+							<a href="#" class="card">
+								<div class="card__img">
+									<img srcset="https://picsum.photos/336/336 336w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="336" alt="" />
+								</div>
+								<div class="card__content">
+									<div class="tag mb-md-4 mb-3">5. 2. 2025</div>
+									<h3 class="h4 text-white mb-md-4 mb-3">
+										Czech Indoor GALA 2025, OSTRAVA!!!
+									</h3>
+									<div class="card__link">
+										<img width="16" height="16" class="object-fit-contain" src="images/ico/align-left.svg" alt="icon" />
+										Přečíst článek
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-md-6 order-xl-0 order-1">
+							<a href="#" class="card">
+								<div class="card__img">
+									<img srcset="https://picsum.photos/336/336 336w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="336" alt="" />
+								</div>
+								<div class="card__content">
+									<div class="tag mb-md-4 mb-3">5. 2. 2025</div>
+									<h3 class="h4 text-white mb-md-4 mb-3">
+										Czech Indoor GALA 2025, OSTRAVA!!!
+									</h3>
+									<div class="card__link">
+										<img width="16" height="16" class="object-fit-contain" src="images/ico/align-left.svg" alt="icon" />
+										Přečíst článek
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-md-6">
+							<div class="boardContent__box boardContent__box--categories">
+								<div class="boardContent__categories">
+									<a href="#" class="text-white h6 py-4 d-flex flex-column gap-2 align-items-center justify-content-center">
+										<img src="images/ico/flag.svg" width="24" height="24" class="object-fit-contain" alt="flag" />
+										Reprezentace
+									</a>
+									<a href="#" class="text-white h6 py-4 d-flex flex-column gap-2 align-items-center justify-content-center">
+										<img src="images/ico/flag.svg" width="24" height="24" class="object-fit-contain" alt="flag" />
+										Extraligový tým
+									</a>
+									<a href="#" class="text-white h6 py-4 d-flex flex-column gap-2 align-items-center justify-content-center">
+										<img src="images/ico/flag.svg" width="24" height="24" class="object-fit-contain" alt="flag" />
+										SDJ
+									</a>
+									<a href="#" class="text-white h6 py-4 d-flex flex-column gap-2 align-items-center justify-content-center">
+										<img src="images/ico/flag.svg" width="24" height="24" class="object-fit-contain" alt="flag" />
+										Mládež
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-8 col-12">
+							<div class="boardContent-slider swiper gallerySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a data-source="/tj-dukla-atletika/build/ajax-gallery.json" data-gallery-id="1" href="#" class="card card-width">
+											<div class="card__img">
+												<img srcset="https://picsum.photos/949/458 458w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="949" alt="" />
+											</div>
+
+											<div class="card__content">
+												<h3 class="h4 text-white mb-md-4 mb-3">
+													Halové Přebory Prahy 2025
+												</h3>
+												<div class="card__link">
+													<img width="16" height="16" class="object-fit-contain" src="images/ico/eye.svg" alt="icon" />
+													Zobrazit galerii
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6">
+							<a href="#" class="card">
+								<div class="card__img">
+									<img srcset="https://picsum.photos/336/336 336w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="336" alt="" />
+								</div>
+								<div class="card__content">
+									<div class="tag mb-md-4 mb-3">5. 2. 2025</div>
+									<h3 class="h4 text-white mb-md-4 mb-3">
+										Czech Indoor GALA 2025, OSTRAVA!!!
+									</h3>
+									<div class="card__link">
+										<img width="16" height="16" class="object-fit-contain" src="images/ico/align-left.svg" alt="icon" />
+										Přečíst článek
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-md-6 order-xl-0 order-1">
+							<div class="cardProduct">
+								<a href="#" class="cardProduct__img">
+									<img src="images/content/product.png" alt="product" />
+									<div class="h3 text-white">
+										Bavlněné tričko Adidas AdidasAdidas CORE18
+									</div>
+								</a>
+								<div class="w-100 d-flex gap-4 justify-content-between align-items-center flex-wrap position-relative">
+									<div class="text-tertiary h3">500 Kč</div>
+									<a href="#" class="button-stroke">
+										<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<g clip-path="url(#clip0_8608_1850)">
+												<path d="M4.999 11.332h7.22c.632 0 .95 0 1.207-.114.228-.1.422-.263.562-.47.16-.233.216-.544.329-1.167l.9-4.953c.04-.216.06-.324.03-.408a.333.333 0 00-.147-.176c-.078-.045-.188-.045-.407-.045H3.999m-2-2.667h.877c.162 0 .243 0 .308.03a.333.333 0 01.142.12c.04.06.052.14.077.3L5.261 13.55c.025.16.038.24.077.3a.333.333 0 00.141.12c.066.03.147.03.309.03h7.544" stroke="#000" stroke-width="1.66" />
+											</g>
+											<defs>
+												<clipPath id="clip0_8608_1850">
+													<path fill="#fff" transform="translate(.665 -.001)" d="M0 0h16v16H0z" />
+												</clipPath>
+											</defs>
+										</svg> Koupit
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-6">
+							<a href="#" class="card">
+								<div class="card__img">
+									<img srcset="https://picsum.photos/336/336 336w" sizes="
+        (min-width: 320px) 320px,
+        calc(100vw - 2.5rem)
+      " width="336" alt="" />
+								</div>
+								<div class="card__content">
+									<div class="tag mb-md-4 mb-3">5. 2. 2025</div>
+									<h3 class="h4 text-white mb-md-4 mb-3">
+										Czech Indoor GALA 2025, OSTRAVA!!!
+									</h3>
+									<div class="card__link">
+										<img width="16" height="16" class="object-fit-contain" src="images/ico/align-left.svg" alt="icon" />
+										Přečíst článek
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="col-xl-4 col-12">
+							<div class="boardContent__box boardContent__boxNews py-6">
+								<ul class="boardContent__list">
+									<li class="boardContent__news">
+										<div class="boardContent__news-date">
+											<span>21.</span>
+											<span>únor</span>
+										</div>
+										<div class="boardContent__news-content">
+											<div class="d-grid gap-2">
+												<div class="boardContent__news-categorie">Kategorie</div>
+												<a href="#" class="text-base-normal fw-bold text-white">
+													Czech Indoor Gala 2025
+												</a>
+											</div>
+											<div class="d-grid gap-2">
+												<div class="boardContent__news-categorie">Kategorie</div>
+												<a href="#" class="text-base-normal fw-bold text-white">
+													Czech Indoor Gala 2025
+												</a>
+											</div>
+										</div>
+									</li>
+									<li class="boardContent__news">
+										<div class="boardContent__news-date">
+											<span>3.</span>
+											<span>únor</span>
+										</div>
+										<div class="boardContent__news-content">
+											<div class="d-grid gap-2">
+												<div class="boardContent__news-categorie">Kategorie</div>
+												<a href="#" class="text-base-normal fw-bold text-white">
+													Czech Indoor Gala 2025
+												</a>
+											</div>
+										</div>
+									</li>
+									<li class="boardContent__news">
+										<div class="boardContent__news-date">
+											<span>7.</span>
+											<span>leden</span>
+										</div>
+										<div class="boardContent__news-content">
+											<div class="d-grid gap-2">
+												<div class="boardContent__news-categorie">Kategorie</div>
+												<a href="#" class="text-base-normal fw-bold text-white">
+													Czech Indoor Gala 2025 Czech Indoor Gala 2025
+												</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</main>
 		<div class="swiper partners-swiper py-md-16 py-10 border-top border-primary">

@@ -33,3 +33,38 @@
     }
   }
 }
+
+.button-stroke {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  border-radius: 128px;
+  transition: color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  text-decoration-color: transparent !important;
+  cursor: pointer;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 23px;
+  svg {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+  svg path {
+    transition: all 0.2s;
+    stroke: var(--color-dark);
+  }
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+
+    svg path {
+      stroke: var(--color-light);
+    }
+  }
+}

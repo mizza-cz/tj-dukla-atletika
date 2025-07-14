@@ -46,7 +46,10 @@
   </head>
   <body>
     <div class="base">
-      {% include "@components/header/header.twig" %}
+      {% if title == '01.0_homepage' %} {% include
+      "@components/header/homeHeader.twig" %} {% else %} {% include
+      "@components/header/header.twig" %} {% endif %}
+
       <main class="main" aria-label="Hlavní obsah">
         {% block main %}{% endblock %}
       </main>
